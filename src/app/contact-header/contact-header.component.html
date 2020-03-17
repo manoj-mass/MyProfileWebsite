@@ -1,0 +1,83 @@
+
+<style>
+    @keyframes  animated-text{
+    from{width: 0%;}
+    to{width: 60%;}  
+  }
+
+  @keyframes blinkTextCursor{
+    /* from{border-right-color: black;}
+    to{border-right-color: transparent;} */
+    from, to { border-color: transparent }
+    50% { border-color: blue }
+  }
+
+  @keyframes hideCursor{
+    /* from{border-right-color: black;}
+    to{border-right-color: transparent;} */
+    from, to { border-color: transparent}
+  }
+
+
+.contactmeButton{
+   
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+    color: blue;
+    background-color: transparent;
+    border-width: 3px;
+    border-radius: 290486px;
+    border-color: blue;
+    position: absolute;
+    right: 30px;
+    
+    
+}
+.textinContactButton{
+        display: flex;
+        text-align: center;
+        width: 60%;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden; 
+        margin: auto;   
+        border-right: 2px solid blue;
+    }
+
+.animation-text{
+    animation:  animated-text 2.5s steps(10) 1s 1 normal both, 
+                blinkTextCursor .5s steps(10) infinite normal,
+                hideCursor 2.6s 4s step-end infinite normal;
+
+    -webkit-animation:  animated-text 2.5s steps(10) 1s 1 normal both, 
+                blinkTextCursor .5s steps(10) infinite normal,
+                hideCursor 2.6s 4s step-end infinite normal;
+}
+
+.contactmeButton:hover{
+    background-color: rgba(0, 0, 255, 0.208);
+}
+
+.headerdiv{
+    margin-top: 45px;
+    width: 100%;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+}  
+
+
+</style>
+
+
+<div class="headerdiv">
+    
+    <img class= "logo" src='assets/favicon.ico'>
+    <button class="H1 contactmeButton"><label class="textinContactButton animation-text">Say Hello</label></button>
+   
+   
+
+</div>

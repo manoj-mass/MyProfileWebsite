@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+//FONTS
+@font-face {
+    font-family: KayakSansRegular;
+    src: url(assets/fonts/Kayak/KayakSansRegular.otf) format("opentype");
+  }
+
+  @font-face {
+    font-family: KayakSansBold;
+    src: url(assets/fonts/Kayak/KayakSansBold.otf) format("opentype");
+  }
+
+//H Tags
+  .H1{
+    font-size: 60px;
+    font-family: KayakSansBold;
+    
+}
+.H2{
+    font-size: 30px; 
+    font-family: KayakSansRegular;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: KayakSansRegular,KayakSansBold; }

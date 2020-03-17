@@ -1,0 +1,104 @@
+<style>
+
+@keyframes enlarge-image-height{
+    from{height: 65%;}
+    to{height: 75%;}
+    from{width: 65%;}
+    to{width: 75%;}
+  }
+ 
+
+  @keyframes hide-image{
+    from{visibility: visible;}
+    to{visibility: hidden;}
+  }
+
+.Languagecard{
+       
+        margin-top: 50px;
+        height: 400px;
+        box-shadow: 0 6px 17px 0 rgba(0,0,0,0.2);
+        width: 100%;
+    }
+
+.IntroductionTitle{
+    font-family: KayakSansRegular;
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+    padding-top: 30px;
+    /* padding-bottom: 30px; */
+    
+}  
+
+.LanguageContainer{
+    /* background-color: green; */
+    width: 80%;
+    margin: 10px auto;
+}
+    
+.grid-box {
+        /* height: 300px;
+        width: 30%; */
+        /* background-color: wheat; */
+
+}
+
+
+.grid-box :hover{
+        background-color: rgb(92, 92, 223);
+        
+    }
+
+.image-box{
+        box-shadow: 0 6px 17px 0 rgba(0,0,0,0.2);
+        /* border-radius: 290486px; */
+        border-radius: 100%;
+        /* padding: 15px; */
+        width: 140px;
+        height: 140px;
+        /* margin: auto; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+ .grid-box-images{
+
+        /* width: 100%;
+        height: 100%; */
+        width: 80px;
+        height: 80px;
+        object-fit:cover; 
+         /* animation: animated-text 2s steps(29,end) 1s 1 normal both, blinkTextCursor 600ms steps(29,end) infinite;; */
+        
+    }
+
+    .image-box :hover{
+        background-color: transparent;
+        animation: enlarge-image-height 3s;
+    }
+
+
+
+</style>
+
+<div class="Languagecard" fxLayout = "column" fxLayoutGap="30px" fxLayoutAlign = "start">
+    <div>
+    <label class="H1 IntroductionTitle">My Portfolio</label>
+    <label class="H2 IntroductionTitle">Click any language to continue</label>
+    </div>
+
+    <div class="LanguageContainer" fxLayoutGap="0px" fxLayout="row"  fxLayoutAlign = "center" >
+    <div class ="grid-box" gdAreas = "item1"  fxFlex ><div class="image-box"><img class ="grid-box-images" src="assets/fluttericon.png"></div></div>
+    <div class ="grid-box" gdAreas = "item2" fxFlex ><div class="image-box"><img class ="grid-box-images" src="assets/swifticon.png"></div></div>
+    <div class ="grid-box" gdAreas = "item3" fxFlex ><div class="image-box"><img class ="grid-box-images" src="assets/nodeicon.png"></div></div>
+    <div class ="grid-box" gdAreas = "item4" fxFlex ><div class="image-box"><img class ="grid-box-images" src="assets/angularicon.svg"></div></div>
+    <div class ="grid-box" gdAreas = "item5" fxFlex ><div class="image-box"><img class ="grid-box-images" src="assets/konyicon.png"></div></div>
+    <div class ="grid-box" gdAreas = "item6" fxFlex  ><div class="image-box"><img class ="grid-box-images" src="assets/wordpressicon.png"></div></div>
+    
+    
+    </div>
+</div>
+<!-- gdRows.lt = "auto auto auto auto auto auto" gdAreas.lt="item1 item2  item3 item4  item5 item6" -->
