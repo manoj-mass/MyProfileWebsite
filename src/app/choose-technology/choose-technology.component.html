@@ -1,5 +1,6 @@
 <style>
 
+
 @keyframes enlarge-image-height{
     from{height: 65%;}
     to{height: 75%;}
@@ -27,15 +28,17 @@
     flex-direction: column;;
     align-items: center;
     padding-top: 30px;
-    /* padding-bottom: 30px; */
+    padding-bottom: 60px;
     
 }  
 
-.LanguageContainer{
+.LanguageContainers{
     /* background-color: green; */
     width: 80%;
     margin: 10px auto;
 }
+
+
     
 .grid-box {
         /* height: 300px;
@@ -81,10 +84,29 @@
     }
 
 
+    #box0.image-box.clicked{
+        background-color: blue;
+    }
+ 
+
+
+    @media only screen and  (max-width: 941px) {
+        .LanguageContainer{
+            visibility: hidden;
+            /* background-color: green; */
+            width: 80%;
+            margin: 10px auto;
+        }
+
+
+
+    }
+   
+
 
 </style>
 
-<div class="Languagecard" fxLayout = "column" fxLayoutGap="30px" fxLayoutAlign = "start">
+<!-- <div class="Languagecard" fxLayout = "column" fxLayoutGap="30px" fxLayoutAlign = "start">
     <div>
     <label class="H1 IntroductionTitle">My Portfolio</label>
     <label class="H2 IntroductionTitle">Click any language to continue</label>
@@ -97,8 +119,19 @@
     <div class ="grid-box" gdAreas = "item4" fxFlex ><div class="image-box"><img class ="grid-box-images" src="assets/angularicon.svg"></div></div>
     <div class ="grid-box" gdAreas = "item5" fxFlex ><div class="image-box"><img class ="grid-box-images" src="assets/konyicon.png"></div></div>
     <div class ="grid-box" gdAreas = "item6" fxFlex  ><div class="image-box"><img class ="grid-box-images" src="assets/wordpressicon.png"></div></div>
-    
-    
+    </div>
+</div> -->
+<div class="Languagecard">
+    <div>
+        <label class="H1 IntroductionTitle">My Portfolio</label>
+        <label class="H2 IntroductionTitle">Click any language to continue</label>
+        </div>
+
+    <div class="LanguageContainer" fxLayoutGap="20px" fxLayout="row"  fxLayoutAlign = "center" >
+    <div *ngFor="let item of allLanguagess; let i = index">
+        <!-- <td>{{i}}</td>  -->
+    <div  (click)="test(item)" class ="grid-box" fxFlex ><div  [ngClass] = "status ? 'clicked'  : 'notclicked'" class="image-box"  id="box{{i}}"><img  class ="grid-box-images" src= {{item.img}}></div></div>
     </div>
 </div>
-<!-- gdRows.lt = "auto auto auto auto auto auto" gdAreas.lt="item1 item2  item3 item4  item5 item6" -->
+</div>
+
