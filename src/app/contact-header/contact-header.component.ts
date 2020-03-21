@@ -20,12 +20,8 @@ export class ContactHeaderComponent implements OnInit {
       elPush.addEventListener('animationend', () => {
         elPush.style.transition = '0.8s';
         elPush.style.opacity = 0;
-        console.log(elPush.style.display);
-        if (elPush.style.display == '') {
-          elWave.style.opacity = 1;
-          elWave.style.transition = '0.5s';
-        }
-
+        elWave.style.opacity = 1;
+        elWave.style.transition = '0.5s';
       }, false);
     }
   }
