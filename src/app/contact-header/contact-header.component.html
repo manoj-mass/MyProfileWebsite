@@ -2,7 +2,7 @@
 <style>
     @keyframes  animated-text{
     from{width: 0%;}
-    to{width: 60%;}  
+    to{width: 60%;}
   }
 
   @keyframes blinkTextCursor{
@@ -20,7 +20,7 @@
 
 
 .contactmeButton{
-   
+
     height: 60px;
     width: 150px;
     font-size: 20px;
@@ -30,9 +30,7 @@
     border-radius: 290486px;
     border-color: blue;
     position: absolute;
-    right: 30px;
-    
-    
+    /* right: 30px; */
 }
 .textinContactButton{
         display: flex;
@@ -40,17 +38,17 @@
         width: 60%;
         position: relative;
         white-space: nowrap;
-        overflow: hidden; 
-        margin: auto;   
+        overflow: hidden;
+        margin: auto;
         border-right: 2px solid blue;
     }
 
 .animation-text{
-    animation:  animated-text 2.5s steps(10) 1s 1 normal both, 
+    animation:  animated-text 2.5s steps(10) 1s 1 normal both,
                 blinkTextCursor .5s steps(10) infinite normal,
                 hideCursor 2.6s 4s step-end infinite normal;
 
-    -webkit-animation:  animated-text 2.5s steps(10) 1s 1 normal both, 
+    -webkit-animation:  animated-text 2.5s steps(10) 1s 1 normal both,
                 blinkTextCursor .5s steps(10) infinite normal,
                 hideCursor 2.6s 4s step-end infinite normal;
 }
@@ -67,17 +65,19 @@
     width: 60px;
     height: 60px;
     margin-left: 30px;
-}  
+}
 
 
 </style>
 
 
 <div class="headerdiv">
-    
+
     <img class= "logo" src='assets/favicon.ico'>
-    <button class="H1 contactmeButton"><label class="textinContactButton animation-text">Say Hello</label></button>
-   
-   
+    <img class="move-right" src="assets/push_v2.gif" width="100px" height="100px" alt="annimation">
+    <img class="waving_gif" src="assets/wavinggif.gif" alt="annimation" style="opacity: 0;">
+    <button class="H1 contactmeButton annimatedButton"><label class="textinContactButton animation-text">Say Hello</label></button>
+
+
 
 </div>
