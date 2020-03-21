@@ -1,110 +1,13 @@
 
-@media (max-width: 575px) {
-  .annimatedButton{
-    right: 30px;
+  @-webkit-keyframes mymovebutton {
+    from {left: 100px;}
   }
-  .move-right{
-    display: none;
-  }
-  .waving_gif{
-    display: none;
-  }
-}
-
-@media (min-width: 576px) {
   @keyframes mymovebutton {
     from {left: 100px;}
   }
 
-  @keyframes mymove {
-    from {left: 0px;}
-  }
-  .annimatedButton{
-    position: absolute;
-      left: 576px;
-      top: 50px;
-      animation: mymovebutton 10s 1;
-      animation-direction: alternate;
-  }
-  .move-right{
-    position: absolute;
-    left: 476px;
-    animation: mymove 10s 1;
-    animation-direction: alternate;
-  }
-  .waving_gif{
-    position: absolute;
-    left: 476px;
-    top: 0px;
-    width: 90px;
-    height: 150px;
-  }
-}
-
-@media (min-width: 768px) {
-  @keyframes mymovebutton {
-    from {left: 100px;}
-  }
-
-  @keyframes mymove {
-    from {left: 0px;}
-  }
-  .annimatedButton{
-    position: absolute;
-      left: 768px;
-      top: 50px;
-      animation: mymovebutton 10s 1;
-      animation-direction: alternate;
-  }
-  .move-right{
-    position: absolute;
-    left: 668px;
-    animation: mymove 10s 1;
-    animation-direction: alternate;
-  }
-  .waving_gif{
-    position: absolute;
-    left: 668px;
-    top: 0px;
-    width: 90px;
-    height: 150px;
-  }
-}
-
-@media (min-width: 992px) {
-  @keyframes mymovebutton {
-    from {left: 100px;}
-  }
-
-  @keyframes mymove {
-    from {left: 0px;}
-  }
-  .annimatedButton{
-    position: absolute;
-      left: 992px;
-      top: 50px;
-      animation: mymovebutton 10s 1;
-      animation-direction: alternate;
-  }
-  .move-right{
-    position: absolute;
-    left: 892px;
-    animation: mymove 10s 1;
-    animation-direction: alternate;
-  }
-
-  .waving_gif{
-    position: absolute;
-    left: 892px;
-    top: 0px;
-    width: 90px;
-    height: 150px;
-  }
-}
-
-@media (min-width: 1200px) {
-  @keyframes mymovebutton {
-    from {left: 100px;}
+  @-webkit-keyframes mymove {
+    from {left: 0px; }
   }
 
   @keyframes mymove {
@@ -112,22 +15,28 @@
   }
   .annimatedButton{
     position: absolute;
-      left: 1150px;
-      top: 50px;
-      animation: mymovebutton 15s 1;
-      animation-direction: alternate;
+      -webkit-animation: mymovebutton 15s;
+              animation: mymovebutton 15s;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
   }
   .move-right{
+    width: 100px;
+    height: 100px;
+    top: 40px;
     position: absolute;
-    left: 1050px;
-    animation: mymove 15s 1;
-    animation-direction: alternate;
+    -webkit-animation: mymove 15s;
+            animation: mymove 15s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
   }
   .waving_gif{
     position: absolute;
-    left: 1050px;
-    top: 0px;
-    width: 100px;
-    height: 170px;
+    top: 20px;
+    width: 70px;
+    height: 115px;
   }
-}
