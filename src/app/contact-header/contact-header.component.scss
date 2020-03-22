@@ -1,19 +1,4 @@
-
-  @-webkit-keyframes mymovebutton {
-    from {left: 100px;}
-  }
-  @keyframes mymovebutton {
-    from {left: 100px;}
-  }
-
-  @-webkit-keyframes mymove {
-    from {left: 0px; }
-  }
-
-  @keyframes mymove {
-    from {left: 0px; }
-  }
-  .annimatedButton{
+.annimatedButton{
     position: absolute;
       -webkit-animation-name: mymovebutton;
               animation-name: mymovebutton;
@@ -45,10 +30,17 @@
     height: 115px;
   }
 
-  .horizTranslate {
-    -webkit-transition: 15s;
-    -moz-transition: 15s;
-    -ms-transition: 15s;
-    -o-transition: 15s;
-    transition: 15s;
+  @-webkit-keyframes mymovebutton {
+    from {left: 100px;} to { left: calc(100vw -200px) ;}
+  }
+  @keyframes mymovebutton {
+    from {left: 100px;} to { left: calc(100vw - 200px) ;}
+  }
+
+  @-webkit-keyframes mymove {
+    from {left: 0px; } to { left: calc(100vw - 300px) ;}
+  }
+
+  @keyframes mymove {
+    from {left: 0px; } to { left: calc(100vw - 300px) ;}
   }
