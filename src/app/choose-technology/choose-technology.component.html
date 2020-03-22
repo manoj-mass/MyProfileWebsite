@@ -7,7 +7,7 @@
     from{width: 65%;}
     to{width: 75%;}
   }
- 
+
 
   @keyframes hide-image{
     from{visibility: visible;}
@@ -15,7 +15,7 @@
   }
 
 .Languagecard{
-       
+
         margin-top: 50px;
         height: 400px;
         box-shadow: 0 6px 17px 0 rgba(0,0,0,0.2);
@@ -29,8 +29,8 @@
     align-items: center;
     padding-top: 30px;
     padding-bottom: 60px;
-    
-}  
+
+}
 
 .LanguageContainers{
     /* background-color: green; */
@@ -39,7 +39,7 @@
 }
 
 
-    
+
 .grid-box {
         /* height: 300px;
         width: 30%; */
@@ -50,7 +50,7 @@
 
 .grid-box :hover{
         background-color: rgb(92, 92, 223);
-        
+
     }
 
 .image-box{
@@ -64,8 +64,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
-        
+
+
     }
  .grid-box-images{
 
@@ -73,9 +73,9 @@
         height: 100%; */
         width: 80px;
         height: 80px;
-        object-fit:cover; 
+        object-fit:cover;
          /* animation: animated-text 2s steps(29,end) 1s 1 normal both, blinkTextCursor 600ms steps(29,end) infinite;; */
-        
+
     }
 
     .image-box :hover{
@@ -87,12 +87,12 @@
     #box0.image-box.clicked{
         background-color: blue;
     }
- 
-   
 
 
 
-   
+
+
+
 
     .Languagecard{
        /* background-color: yellow; */
@@ -108,10 +108,10 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        
-       
+
+
      }
-    
+
      .mobileProfileCard{
          display: flex;
          flex-direction: column;
@@ -120,17 +120,17 @@
          width: 150px;
          height: 150px;
          padding-top: 20px;
-         
+
          margin: 30px 30px 0px 30px;
          box-shadow: 0 6px 17px 0 rgba(0,0,0,0.2);
          /* border-radius: 100%; */
      }
-      
+
      .mobileProfileCard-img{
          border-radius: 100%;
           width: 70%;
           height: 70%;
-         
+
       }
 
       .mobileProfileCard-text{
@@ -158,8 +158,8 @@
 
 </style>
 
-<div >  
-    <div class = "MobileViewProfileContainer"> 
+<div >
+    <div class = "MobileViewProfileContainer">
         <div class = "mobileProfileCard">
             <img class = "mobileProfileCard-img" src="assets/profilepic2.jpg" alt="myprojects">
             <label class = "H3 mobileProfileCard-text">About me</label>
@@ -175,26 +175,27 @@
 <div class="Languagecard">
 
 <div (window:resize)="onResize($event.srcElement.innerWidth)"  >
-    <div *ngIf = "!mobileView">  
+    <div *ngIf = "!mobileView">
         <div>
             <label class="H1 IntroductionTitle">My Portfolio</label>
             <label class="H2 IntroductionTitle" >Click any language to continue</label>
     </div>
         <div  class="LanguageContainer"  fxLayoutGap="20px" fxLayout="row"  fxLayoutAlign = "center" >
-            <div [ngClass] = "allButtonPressed ? 'clicked'  : 'notclicked'" (click)="MovingLanguageIcon(allButton)" class = "H1 testall"><label>ALL</label></div>
+            <div [ngClass] = "allButtonPressed ? 'clicked'  : 'notclicked'" (click)="MovingLanguageIcon($event, allButton)" class = "H1 testall"><label>ALL</label></div>
             <div  *ngFor="let item of allLanguagess; let i = index">
-                
-                <div (click)="MovingLanguageIcon(item)" class ="grid-box" fxFlex >
-                    <div  [ngClass] = "status ? 'clicked'  : 'notclicked'" class="image-box"  id="box{{i}}">
-                    <img  class ="grid-box-images" src= {{item.img}}>
-                    </div>   
+
+                <div (click)="MovingLanguageIcon($event, item)" class ="grid-box" fxFlex >
+                    <!-- <div  [ngClass] = "status ? 'clicked'  : 'notclicked'" class="image-box"  id="box{{i}}"> -->
+                      <div [ngClass]="{'active': item.active}" class="image-box"  id="box{{i}}">
+                      <img  class ="grid-box-images" src= {{item.img}}>
+                    </div>
                 </div>
             </div>
     </div>
 </div>
 
 
-    
+
 
 
 </div>
