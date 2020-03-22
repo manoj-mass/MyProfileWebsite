@@ -421,10 +421,10 @@
               <label class="H2 IntroductionTitle" >Click any language to continue</label>
       </div>
           <div  class="LanguageContainer"  fxLayoutGap="20px" fxLayout="row"  fxLayoutAlign = "center" >
-              <div [ngClass] = "allButtonPressed ? 'clicked'  : 'notclicked'" (click)="MovingLanguageIcon(allButton)" class = "H1 testall"><label>ALL</label></div>
+              <div [ngClass] = "allButtonPressed ? 'clicked'  : 'notclicked'" (click)="MovingLanguageIcon(allButton, null)" class = "H1 testall"><label>ALL</label></div>
               <div  *ngFor="let item of allLanguagess; let i = index">
 
-                  <div (click)="MovingLanguageIcon(item)" class ="grid-box" fxFlex >
+                  <div (click)="MovingLanguageIcon(item, i)" class ="grid-box" fxFlex >
                     <div [ngClass]="{'active': item.active}" class="image-box"  id="box{{i}}">
                       <img  class ="grid-box-images" src= {{item.img}}>
                       </div>

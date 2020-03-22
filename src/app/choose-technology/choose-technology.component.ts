@@ -32,10 +32,15 @@ export class ChooseTechnologyComponent implements OnInit {
 
   }
 
- MovingLanguageIcon(data){
+ MovingLanguageIcon(data, index){
    console.log(event);
-   data.active = !data.active;
-
+   this.allLanguagess.map((item, i) => {
+     if (i === index) {
+       item.active = true;
+     } else {
+       item.active = false;
+     }
+   });
 //  if(event.id != "all" ){
 //    this.allButtonPressed = false;
 //   this.status = true
