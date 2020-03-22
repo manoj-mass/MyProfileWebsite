@@ -413,7 +413,7 @@
 
 
 
-  <!-- <div class="Languagecard">
+<div class="Languagecard">
   <div (window:resize)="onResize($event.srcElement.innerWidth)"  >
       <div *ngIf = "!mobileView">
           <div>
@@ -425,7 +425,7 @@
               <div  *ngFor="let item of allLanguagess; let i = index">
 
                   <div (click)="MovingLanguageIcon(item)" class ="grid-box" fxFlex >
-                      <div  [ngClass] = "status ? 'clicked'  : 'notclicked'" class="image-box"  id="box{{i}}">
+                    <div [ngClass]="{'active': item.active}" class="image-box"  id="box{{i}}">
                       <img  class ="grid-box-images" src= {{item.img}}>
                       </div>
                   </div>
@@ -433,6 +433,6 @@
       </div>
       </div>
   </div>
-  </div> -->
+  </div>
 
   <!-- fxLayoutGap="20px" fxLayout="row"  fxLayoutAlign = "center" class = "MobileChooseTechnologies" -->
