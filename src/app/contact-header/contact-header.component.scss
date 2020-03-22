@@ -15,46 +15,40 @@
   }
   .annimatedButton{
     position: absolute;
-    -webkit-animation: mymovebutton 15s;
-    -moz-animation: mymovebutton 15s;
-    -ms-animation: mymovebutton 15s;
-    -o-animation: mymovebutton 15s;
-              animation: mymovebutton 15s;
+      -webkit-animation-name: mymovebutton;
+              animation-name: mymovebutton;
+      -webkit-animation-duration: 15s;
+              animation-duration: 15s;
       -webkit-animation-iteration-count: 1;
-      -moz-animation-iteration-count: 1;
-      -ms-animation-iteration-count: 1;
-      -o-animation-iteration-count: 1;
-              animation-iteration-count: 1;
+               animation-iteration-count: 1;
       -webkit-animation-direction: alternate;
-      -moz-animation-direction: alternate;
-      -ms-animation-direction: alternate;
-      -o-animation-direction: alternate;
-              animation-direction: alternate;
+               animation-direction: alternate;
   }
   .move-right{
     width: 100px;
     height: 100px;
     top: 40px;
     position: absolute;
-    -webkit-animation: mymove 15s;
-    -moz-animation: mymove 15s;
-    -ms-animation: mymove 15s;
-    -o-animation: mymove 15s;
-            animation: mymove 15s;
-    -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1;
-    -ms-animation-iteration-count: 1;
-    -o-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-direction: alternate;
-    -moz-animation-direction: alternate;
-    -ms-animation-direction: alternate;
-    -o-animation-direction: alternate;
-            animation-direction: alternate;
+    -webkit-animation-name: mymove;
+             animation-name: mymove;
+     -webkit-animation-duration: 15s;
+             animation-duration: 15s;
+     -webkit-animation-iteration-count: 1;
+             animation-iteration-count: 1;
+     -webkit-animation-direction: alternate;
+             animation-direction: alternate;
   }
   .waving_gif{
     position: absolute;
     top: 20px;
     width: 70px;
     height: 115px;
+  }
+
+  .horizTranslate {
+    -webkit-transition: 15s;
+    -moz-transition: 15s;
+    -ms-transition: 15s;
+    -o-transition: 15s;
+    transition: 15s;
   }
