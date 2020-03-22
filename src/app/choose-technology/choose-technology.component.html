@@ -94,22 +94,66 @@
 
 
 
-    .Languagecard{
-       /* background-color: yellow; */
+    /* .Languagecard{
+       background-color: yellow;
        margin-top: 50px;
-       height: 200px;
+       height: 3000px;
        box-shadow: 0 0px 0px 0 rgba(0,0,0,1000);
        width: 100%;
-   }
+   } */
 
+.boxAroundChooseContainer{
+    box-shadow: 0 6px 17px 0 black;
+    border-width: 1px;
+    border-right: rgba(0, 0, 255, 0.411);
+    border-left: rgba(0, 0, 255, 0.411);
+    border-style: solid;
+    border-top:transparent;
+    border-bottom: transparent;
+    margin-top: 60px;
+      height: 885px;  
+      width: 95%;   
+      margin: auto;  
+        /* background-color: yellow; */
+       /* border-top: 2px solid rgba(0, 0, 0, 0.199); */
+
+    }
+
+    .MeDescription{
+        margin: auto;
+        margin-bottom: 30px;
+        width: 70%;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:5px;
+        align-items: center;
+        line-height: 300%;
+        text-align: center;
+        
+        
+    }
+
+    .MeDescription-headertext{
+        margin-top:60px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: blue;
+    }
+
+   
 
      .MobileViewProfileContainer{
         /* background-color: yellow; */
+        
         display: flex;
         flex-direction: row;
         justify-content: center;
-
-
+        width: 80%;
+        height: 400px;
+        margin:auto;
+       
      }
 
      .mobileProfileCard{
@@ -117,25 +161,84 @@
          flex-direction: column;
          align-items: center;
          justify-content: flex-start;
-         width: 150px;
-         height: 150px;
-         padding-top: 20px;
-
-         margin: 30px 30px 0px 30px;
-         box-shadow: 0 6px 17px 0 rgba(0,0,0,0.2);
+         width: 45%;
+         height: 100%;
+         padding-top: 20px; 
+         margin: 30px 5% 0px 5%;
+         /* box-shadow: 0 6px 17px 0 rgba(0,0,0,0.2); */
+         box-shadow: 0 6px 17px 0 rgba(35, 13, 231, 0.286);
          /* border-radius: 100%; */
      }
 
      .mobileProfileCard-img{
          border-radius: 100%;
-          width: 70%;
-          height: 70%;
-
+        
+         /* box-shadow: 0 6px 17px 0 rgba(35, 13, 231, 0.8); */
+          width: 100px;
+          height: 100px;
+         
       }
+
+ 
+
 
       .mobileProfileCard-text{
-          margin: auto;
+          /* margin: auto; */
+          margin-top: 30px;
+          width: 80%;
       }
+
+      .mobileProfileCard-div-button{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: flex-end;
+        align-self: flex-end;
+        margin-top: 30px;
+        margin-right: -15px;
+        width: 100%;
+    
+      }
+
+      /* ANIMATION */
+      @keyframes move-readmore-button{
+    from{margin-right: -0px;}
+    to{margin-right: -25px;}
+  }
+
+
+ 
+      .mobileProfileCard-button{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 50px;
+        width: 80%;
+        border-width: 2px;
+        border-color: blue;
+        background-color: white;
+        /* background-color: rgba(0, 0, 255, 1); */
+        color: blue;
+        border-radius: 0.5em;
+        align-self: flex-end;
+        
+      
+      }
+
+
+      .mobileProfileCard-button:hover{
+      animation: move-readmore-button 2s 0s 1 normal both;
+      background-color: rgba(0, 0, 255, 0.329);
+      
+  }
+
+      .mobileProfileCard-div-button-img{
+        margin-left: auto;
+        height: 30px;
+        width: 30px;
+        
+        }
 
     .testall{
         box-shadow: 0 6px 17px 0 rgba(0,0,0,0.2);
@@ -156,23 +259,161 @@
     }
 
 
+   /* IPAD/MOBILE VIEW */
+   @media only screen and  (max-width: 941px) {
+
+     
+    .boxAroundChooseContainer{
+        /* margin-top: 60px;
+         display: flex;
+         flex-direction: column; 
+        align-items: flex-start;
+         justify-content: flex-start; 
+         height: 1200px; */
+    box-shadow: 0 6px 17px 0 black;
+    border-width: 1px;
+    border-right: rgba(0, 0, 255, 0.411);
+    border-left: rgba(0, 0, 255, 0.411);
+    border-style: solid;
+    border-top:transparent;
+    border-bottom: transparent;
+    margin-top: 0px;
+      height: 100%;  
+      width: 95%;   
+      margin: auto;  
+         
+    }
+
+     .MeDescription{
+
+        margin: 0px auto 0px auto;
+        margin-bottom: 0px;
+        width: 70%;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:0px;
+        align-items: center;
+        line-height: 0%;
+        text-align: center;
+        height: 5%;
+        
+    }
+
+    .MeDescription-headertext{
+     margin-top:60px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: blue;
+    } 
+    
+    
+    
+    .MobileViewProfileContainer{
+        /* margin-top: 0px; */
+        margin-top:50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: 60%;
+        /* margin:auto; */
+       
+     }
+
+
+
+
+
+    .mobileProfileCard{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-start;
+         width: 70%;
+         height: 100%;
+         padding-top: 0px; 
+         margin: 0px auto 90px auto;
+         box-shadow: 0 6px 17px 0 rgba(35, 13, 231, 0.286);
+       
+     }
+      
+     .mobileProfileCard-img{
+         border-radius: 100%;
+          width: 100px;
+          height: 100px;
+         
+      }
+
+ 
+
+
+      .mobileProfileCard-text{
+
+          margin-top: 30px;
+          width: 80%;
+      }
+
+
+
+
+
+
+
+
+   }
+
+
 </style>
 
-<div >
-    <div class = "MobileViewProfileContainer">
+<div class= "boxAroundChooseContainer" >      
+    <div class = "MeDescription">
+        <label class="H2 MeDescription-headertext" (window:resize)="onResize($event.srcElement.innerWidth)">
+            Hi, I’m Neill. Nice to meet you.
+        </label>
+        <label  *ngIf = "!mobileView" class="H3">
+            Since beginning my journey as a freelance designer nearly 8 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.
+        </label>
+    </div>
+    <div class = "MobileViewProfileContainer"> 
         <div class = "mobileProfileCard">
-            <img class = "mobileProfileCard-img" src="assets/profilepic2.jpg" alt="myprojects">
-            <label class = "H3 mobileProfileCard-text">About me</label>
-        </div>
-        <div class = "mobileProfileCard">
-            <img class = "mobileProfileCard-img" src="assets/projects.png" alt="myprojects">
-            <label class = "H3 mobileProfileCard-text">My Projects</label>
-        </div>
+            <img class = "mobileProfileCard-img"src="assets/profilepic2.jpg" alt="myprojects">
+            <label class = "H2 mobileProfileCard-text">About me</label>
+            <label class = "H3 mobileProfileCard-text">Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</label>
+            <div class="mobileProfileCard-div-button">
+                <button class = "H3 mobileProfileCard-button">
+                    <label>
+                        Read More
+                    </label> 
+                     <img class="mobileProfileCard-div-button-img"src="assets/next.png" alt="next">
+                </button>
+            </div>
+        
+            </div>
+            <div class = "mobileProfileCard">
+                <img class = "mobileProfileCard-img" src="assets/projects.png" alt="myprojects">
+                <label class = "H2 mobileProfileCard-text">My Projects</label>
+                <label class = "H3 mobileProfileCard-text">Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</label>
+                <div class="mobileProfileCard-div-button">
+                    <button class = "H3 mobileProfileCard-button">
+                        <label>
+                            Read More
+                        </label> 
+                            <img class="mobileProfileCard-div-button-img"src="assets/next.png" alt="next">
+                    </button>
+                </div>
+            
+            </div>
     </div>
 </div>
 
 
-<div class="Languagecard">
+
+
+
+
+<!-- <div class="Languagecard">
 
 <div (window:resize)="onResize($event.srcElement.innerWidth)"  >
     <div *ngIf = "!mobileView">
@@ -192,16 +433,8 @@
                 </div>
             </div>
     </div>
+    </div>
 </div>
 
-
-
-
-
-</div>
-
-
-
-</div>
-
+</div> -->
 <!-- fxLayoutGap="20px" fxLayout="row"  fxLayoutAlign = "center" class = "MobileChooseTechnologies" -->
