@@ -56,4 +56,6 @@ export class ChooseTechnologyComponent implements OnInit {
 
  }
 
+
+
 }
